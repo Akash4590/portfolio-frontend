@@ -65,7 +65,7 @@ body {
   box-shadow: 0 10px 30px rgba(102, 126, 234, 0.6);
 }
 
-/* Stars Animation */
+/* Stars Animation - Static twinkling stars */
 .stars,
 .stars2,
 .stars3 {
@@ -79,14 +79,14 @@ body {
 
 .stars {
   background: transparent;
-  animation: animateStars 50s linear infinite;
+  animation: twinkle 3s ease-in-out infinite;
   box-shadow: 
     779px 1331px 1px 0px #fff,
     324px 42px 1px 0px #fff,
     303px 586px 1px 0px #fff,
     1312px 276px 1px 0px #fff,
     451px 625px 1px 0px #fff,
-    521px 1931px 1px 0px #fff,
+    521px 931px 1px 0px #fff,
     1087px 1871px 1px 0px #fff,
     36px 1546px 1px 0px #fff,
     132px 934px 1px 0px #fff,
@@ -94,40 +94,42 @@ body {
     1418px 664px 1px 0px #fff,
     1448px 1157px 1px 0px #fff,
     1084px 232px 1px 0px #fff,
-    347px 1776px 1px 0px #fff,
+    347px 776px 1px 0px #fff,
     1722px 243px 1px 0px #fff,
     1629px 835px 1px 0px #fff,
     1759px 80px 1px 0px #fff,
-    1248px 1990px 1px 0px #fff,
+    1248px 990px 1px 0px #fff,
     1155px 1358px 1px 0px #fff,
     1658px 429px 1px 0px #fff;
 }
 
 .stars2 {
   background: transparent;
-  animation: animateStars 100s linear infinite;
+  animation: twinkle 4s ease-in-out infinite;
+  animation-delay: 1s;
   box-shadow: 
-    779px 1331px 2px 1px #fff,
-    324px 42px 2px 1px #fff,
-    303px 586px 2px 1px #fff,
-    1312px 276px 2px 1px #fff,
-    451px 625px 2px 1px #fff,
-    521px 1931px 2px 1px #fff,
-    1087px 1871px 2px 1px #fff,
-    36px 1546px 2px 1px #fff,
-    132px 934px 2px 1px #fff,
-    1698px 901px 2px 1px #fff;
+    779px 331px 2px 1px #fff,
+    324px 842px 2px 1px #fff,
+    303px 286px 2px 1px #fff,
+    1312px 676px 2px 1px #fff,
+    451px 425px 2px 1px #fff,
+    521px 631px 2px 1px #fff,
+    1087px 871px 2px 1px #fff,
+    36px 546px 2px 1px #fff,
+    132px 134px 2px 1px #fff,
+    1698px 101px 2px 1px #fff;
 }
 
 .stars3 {
   background: transparent;
-  animation: animateStars 150s linear infinite;
+  animation: twinkle 5s ease-in-out infinite;
+  animation-delay: 2s;
   box-shadow: 
-    779px 1331px 3px 2px #fff,
-    324px 42px 3px 2px #fff,
-    303px 586px 3px 2px #fff,
-    1312px 276px 3px 2px #fff,
-    451px 625px 3px 2px #fff;
+    779px 531px 3px 2px #fff,
+    324px 242px 3px 2px #fff,
+    303px 786px 3px 2px #fff,
+    1312px 176px 3px 2px #fff,
+    451px 825px 3px 2px #fff;
 }
 
 /* Shooting Stars Animation */
@@ -178,12 +180,13 @@ body {
   }
 }
 
-@keyframes animateStars {
-  from {
-    transform: translateY(0px);
+/* Twinkle animation for stars */
+@keyframes twinkle {
+  0%, 100% {
+    opacity: 1;
   }
-  to {
-    transform: translateY(-2000px);
+  50% {
+    opacity: 0.3;
   }
 }
 
